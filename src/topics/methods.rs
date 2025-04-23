@@ -3,7 +3,7 @@
 // - Can take parameters and return values,
 
 // Unlike functions, methods are defined within the context of a struct(or an enum or trait object),
-// - and their first parameter is alwayas "self", which represents the instance of the struct the method is
+// - and their first parameter is always "self", which represents the instance of the struct the method is
 // - being called on.
 
 // Function that is associated with a particular type or struct

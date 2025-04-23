@@ -1,8 +1,8 @@
 // Generics:
 //- Placeholders for concrete types.
-//-  Enables writing more reusable and flexible code.
-//-  Avoids having duplicate code for different types.
-//-  Zero cost abstraction, Rust compiler will at compile time fill out generics with concrete types.
+//- Enables writing more reusable and flexible code.
+//- Avoids having duplicate code for different types.
+//- Zero cost abstraction, Rust compiler will at compile time fill out generics with concrete types.
 
 // Const Generics:
 //- Type parameter that represents a compilte-time constant value.
@@ -43,9 +43,26 @@ pub struct Point<T> {
 // let integer_point = Point { x: 5, y: 10 };
 // let float_point = Point { x: 5.0, y: 10.0 };
 
+#[derive(Clone, Debug)]
 pub struct Point2<T, U> {
-    x: T,
-    y: U,
+    pub x: T,
+    pub y: U,
+}
+
+impl<T: Clone, U: Clone> Point2<T, U> {
+    pub fn mixup<V, W>(self, p2: Point2<V, W>) -> Point2<T, W> {
+        Point2 { x: self.x, y: p2.y }
+    }
+
+    pub fn mixup_associated<V: Clone, W: Clone>(
+        p1: &Point2<T, U>,
+        p2: &Point2<V, W>,
+    ) -> Point2<T, W> {
+        Point2 {
+            x: p1.x.clone(),
+            y: p2.y.clone(),
+        }
+    }
 }
 
 // let p = Point2 { x: 5, y: 10.0 }; // T is i32, U is f64
@@ -58,4 +75,10 @@ impl<T> Val<T> {
     pub fn value(&self) -> &T {
         &self.val
     }
+}
+
+// CONST GEMERICS
+#[derive(Debug)]
+pub struct Array<T, const N: usize> {
+    pub data: [T; N],
 }

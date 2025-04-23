@@ -1,4 +1,4 @@
-// All functions definded within an "impl" block are colled associated functions because
+// All functions defined within an "impl" block are called associated functions because
 //- they're associated with the type named after the "impl" block. We can define associated functions
 //- that don't have "self" as their first parameter (and thus are not methods) because the don't need
 //- an instance of the type to work with.
@@ -15,8 +15,8 @@ struct Rectangle {
 // new() is an associated function, because it doens't have "self" as its first parameter.
 // So, to call the new() function, we don't need an instance of the struct.
 impl Rectangle {
-    fn new(width: u32, height: u32) -> Rectangle {
-        Rectangle { width, height }
+    fn new(width: u32, height: u32) -> Self {
+        Self { width, height }
     }
 }
 
