@@ -1,6 +1,15 @@
+// https://www.youtube.com/watch?v=BpPEoZW5IiY&t=40108s
+
 use topics::{
     associated_function::TrafficLight,
+    closures::{
+        _example_closure_capturing_01, _example_closure_capturing_02, _example_closures_04,
+        _example_closures_06, _example_closures_09,
+    },
+    debug_display::{example_debug_04, example_display_01, example_display_02},
     generics::{Array, Point2, Val},
+    iterators::{_example_iterators_07, _example_iterators_08, _example_iterators_10},
+    lifetimes::example_lifetime_annotation_02,
     methods::TrafficLightColorEnum,
     string::{example_4, exercise_3},
     trait_object::{return_animal, reuturn_animal_2, Bird, Duck, Swan},
@@ -61,4 +70,17 @@ fn main() {
     }
 
     vectors_exercise_4();
+
+    example_debug_04();
+    example_display_01();
+    example_display_02();
+    example_lifetime_annotation_02();
+    _example_closure_capturing_01();
+    _example_closure_capturing_02();
+    _example_closures_04();
+    _example_closures_06();
+    _example_closures_09();
+    _example_iterators_07();
+    _example_iterators_08();
+    _example_iterators_10();
 }

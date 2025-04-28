@@ -27,8 +27,8 @@
 // when casting from float to int. If the floating point value exceeds
 // the upper bound or is less than the lower bound, the returned value
 // will be equal to the bound crossed.
-assert_eq!(300.1_f32 as u8, 255);
-assert_eq!(-100.1_f32 as u8, 0);
+// assert_eq!(300.1_f32 as u8, 255);
+// assert_eq!(-100.1_f32 as u8, 0);
 
 // This behavior incurs a small runtime cost and can be avoided
 // with unsafe methods,  however the results might overflow and
