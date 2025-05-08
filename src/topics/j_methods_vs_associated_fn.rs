@@ -1,12 +1,14 @@
-// Methods are similar to functions:
+// # Methods x Associated Functions
+//
+// ## Methods are similar to functions:
 // - Declare with fn keyword,
 // - Can take parameters and return values,
-
+//
 // Unlike functions, methods are defined within the context of a struct(or an enum or trait object),
-// - and their first parameter is always "self", which represents the instance of the struct the method is
-// - being called on.
-
-// Function that is associated with a particular type or struct
+// and their first parameter is always "self", which represents the instance of the struct the method is
+// being called on.
+//
+// ## Function that is associated with a particular type or struct
 // Takes parameters and returns a value, but defined as a member of a struct or enum
 // Called using dot notation (like accessing members of a struct)
 // Implemented through the "impl" block

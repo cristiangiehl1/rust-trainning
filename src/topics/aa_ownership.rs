@@ -1,3 +1,5 @@
+// # Ownership
+//
 // Rust's ownership system is unique and sets it apart from other programming languages.
 // Set of rules that govern how memory is managed in Rust.
 // Rules are enforced at compile time.
@@ -7,9 +9,9 @@
 // 1. Each value in Rust has a variable that’s called its “owner”.
 // 2. A value can only have one owner at a time.
 // 3. When the owner of a value goes out of scope, Rust will automatically drop the value.
-//    This is called "automatic memory management" or "garbage collection".
+//    This is called "automatic memory management" or "garbage collector".
 
-// Owner: The owner of a value is the variable or data structure that holds it and is responsabible
+// Owner: The owner of a value is the variable or data structure that holds it and is responsable
 // for allocating and freeing the memory used to store that data.
 
 // Ownership prevents memory safety issues:

@@ -1,6 +1,10 @@
-// Powerful construct that allows to compare a value agains a set of patterns, the execute
-// - different code based on which pattern matched.
+// # Pattern Match
+//
+// Powerful construct that allows to compare a value agains a set of patterns, then execute
+// different code based on which pattern matched.
+//
 // Patterns can be made up of literal values, variable, names, wildcards, etc...
+//
 // In match, all possible cases must be handled, enforced by the compiler.
 
 // Here, we have an enum Coin which holds different denomitations of US coins.
@@ -25,8 +29,10 @@ pub fn pattern_match_example(coin: Coin) -> u8 {
     coin_value
 }
 
-// matches! macro is a powerful macro that allows to match a value against a pattern and returns true or false
-// - matches!(value, pattern) returns true if value matches the pattern, false otherwise
+// ## matches! macro
+//
+// A powerful macro that allows to match a value against a pattern and returns true or false
+// matches!(value, pattern) returns true if value matches the pattern, false otherwise
 pub fn matches_example() {
     let alphabets = ['a', 'E', 'Z', '0', 'x', '9', 'Y'];
 
@@ -72,8 +78,9 @@ struct Point {
     y: i32,
 }
 
-// pattern binding or subpattern matching
-// - allows to match a pattern and bind the value to a variable
+// ## pattern binding or subpattern matching
+//
+// Allows to match a pattern and bind the value to a variable
 pub fn match_example_3() {
     let p = Point { x: 1, y: 2 };
 
@@ -114,8 +121,10 @@ pub fn match_example_4() {
     }
 }
 
-// A MATCH GUARD is an additional if condition specified after the pattern in a match that must also match, alogn with the pattern matching,
-/// for that arm to be chosen.
+// ## Match Guard
+//
+// A match guard is an additional if condition specified after the pattern in a match that must also match, along with the pattern matching,
+// for that arm to be chosen.
 pub fn match_guard_example() {
     let num = Some(4);
     let split = 5;

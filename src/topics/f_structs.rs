@@ -1,3 +1,5 @@
+// # Structs
+//
 // Compound type allowing to group together values of different types into a named data structure.
 // Similar to tuples. but each value has a name so values can be accessed through this name.
 // Have to be instanciated with data, think of it like the struct is the template for the instances you create from it.
@@ -48,11 +50,12 @@ pub fn struct_update_syntax() {
     println!("user2: {:?}", user2);
 }
 
-// Partial Move
-// - Within the destructuring of a single variable, both by-move and by-reference pattern bindings can be used at
-/// the same time. Doing this will result in a partial move of the variable, which means that parts of the variable
-/// will be moved while others parts stay. In such a case, the parent variable cannot be used afterwards as a whole,
-/// however, the parts that are only referenced (and not moved) can still be used.
+// ## Partial Move
+//
+// Within the destructuring of a single variable, both by-move and by-reference pattern bindings can be used at
+// the same time. Doing this will result in a partial move of the variable, which means that parts of the variable
+// will be moved while others parts stay. In such a case, the parent variable cannot be used afterwards as a whole,
+// however, the parts that are only referenced (and not moved) can still be used.
 
 #[derive(Debug)]
 struct File {

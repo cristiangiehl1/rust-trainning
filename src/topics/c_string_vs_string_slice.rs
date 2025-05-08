@@ -1,20 +1,20 @@
-// String:
-// - A String is a heap-allocated string type that owns its contents and is mutable.
-// - Use String if you need to own the data and be able to mutatite it.
+// # String:
+// - A String is a `heap-allocated` string type that owns its contents and is mutable.
+// - Use String if you need to own the data and be able to mutate it.
 
-// &str - string slice:
-// - A &str is an immutable sequence of UTF-8 bytes in memory, it does not own the underlying data and is immutable.
+// # &str - string slice:
+// - A &str is an `immutable` sequence of UTF-8 bytes in memory, it does not own the underlying data and is immutable.
 // - Think of &str as a view on a sequence of characters (stored as UTF-8 bytes) in memory.
 // - A &str is a borrowed reference to a String, while String is an owned string type.
 // - Use &str if you just want to a view of a string, and you don't need to modify it.
 // - &str is more lightweight and efficient than String, as it does not require heap allocation.
 
-// String Literal:
+// # String Literal:
 // - A string literal is a sequence of characters enclosed in double quotes("").
 // - Fixed size, compile-time known sequence of UTF-8 bytes.
-// - The type is &'static str, which indicates the data is stored in static memory,
+// - The type is &'static str, which indicates the data is stored in `static memory`,
 // meaning it is valid throughout the entire lifetime of the program.
-// - The data is hardcoded into the executable and stored in read-only memory, meaning the are immutable.
+// - The data is hardcoded into the executable and stored in read-only memory, meaning they are immutable.
 // let s: String = String::from("hello world");
 
 // let hello: String = &s[0..5]; // hello

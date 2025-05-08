@@ -1,14 +1,16 @@
-// Way to stored related pieces of information in a single variable
-// Collection of values of different types grouped together as a single compound value (type composed of other types)
-// Store as a fixed-size contiguous block of memory on the stack
+// # Tuples
+//
+// Way to stored related pieces of information in a single variable.
+// Collection of values of different types grouped together as a single compound value (type composed of other types).
+// Store as a fixed-size contiguous block of memory on the stack.
 // Signature is (T, T, T...)
 
 pub fn tuples_01() {
-    let _t0: (u8, i16) = (0, -1);
+    let _t0 = (0, -1);
 
-    let _t1: (u8, (i16, u32)) = (0, (-1, 1));
+    let _t1 = (0, (-1, 1));
 
-    let t: (u8, u16, i64, &str, String) = (1u8, 2u16, 3i64, "hello", String::from(", world"));
+    let _t = (1u8, 2u16, 3i64, "hello", String::from(", world"));
 }
 
 pub fn tuples_02() {
